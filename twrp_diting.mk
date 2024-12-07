@@ -48,5 +48,18 @@ PRODUCT_MANUFACTURER := $(PRODUCT_BRAND)
 # Device path for OEM device tree
 DEVICE_PATH := device/$(PRODUCT_BRAND)/$(PRODUCT_DEVICE)
 
+# Kernel modules
+TW_LOAD_VENDOR_MODULES := "adsp_loader_dlkm.ko fts_touch_spi.ko"
+
+# Theme
+TW_STATUS_ICONS_ALIGN := center
+TW_Y_OFFSET := 106
+TW_H_OFFSET := -106
+
+# Haptic
+TW_SUPPORT_INPUT_AIDL_HAPTICS := true
+TW_SUPPORT_INPUT_AIDL_HAPTICS_FQNAME := "IVibrator/vibratorfeature"
+TW_SUPPORT_INPUT_AIDL_HAPTICS_FIX_OFF := true
+
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
