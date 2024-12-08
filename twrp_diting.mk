@@ -53,3 +53,13 @@ $(call inherit-product, $(DEVICE_PATH)/device.mk)
 
 # Kernel modules
 TW_LOAD_VENDOR_MODULES := "adsp_loader_dlkm.ko fts_touch_spi.ko"
+
+# Haptic
+TW_SUPPORT_INPUT_AIDL_HAPTICS := true
+TW_SUPPORT_INPUT_AIDL_HAPTICS_FQNAME := "IVibrator/vibratorfeature"
+TW_SUPPORT_INPUT_AIDL_HAPTICS_FIX_OFF := true
+
+# Theme
+TW_STATUS_ICONS_ALIGN := center
+TW_Y_OFFSET := 106
+TW_H_OFFSET := -106
